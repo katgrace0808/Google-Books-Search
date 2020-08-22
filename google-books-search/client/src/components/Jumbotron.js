@@ -6,6 +6,7 @@ function Jumbotron() {
       style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
       className="jumbotron"
     >
+    <h1>Google Books</h1>
     </div>
   );
 }
