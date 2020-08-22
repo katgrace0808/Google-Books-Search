@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
-const Schema = mongoos.Schema;
+const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
     title: { type: String, required: true },
     authors: { type: String, required: true },
     description: String,
-    image: URL,
-    link: URL
+    imageURL: String,
+    linkURL: String
 })
 
 const Book = mongoose.model("Book", bookSchema);
