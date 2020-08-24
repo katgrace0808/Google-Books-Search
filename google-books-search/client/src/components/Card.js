@@ -7,11 +7,11 @@ function Card(props) {
 const [book, setBook] = useState({});
 
 const {id} = useParams()
-useEffect(() => {
-  API.getBook(id)
-    .then(res => setBook(res.data))
-    .catch(err => console.log(err));
-}, [])
+    useEffect(() => {
+    API.getBook(id)
+        .then(res => setBook(res.data))
+        .catch(err => console.log(err));
+    }, [])
 
     return (
         <div className="card w-75 mx-auto">
