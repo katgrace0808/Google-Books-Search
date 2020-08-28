@@ -23,7 +23,7 @@ function ResultsCard() {
     function loadBooks() {
         API.getBooks()
             .then(res => {
-                console.log(res)
+                console.log(res.data)
                 setBooks(res.data)}
             )
             .catch(err => console.log(err));
