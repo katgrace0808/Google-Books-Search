@@ -9,7 +9,6 @@ function Books() {
   const [result, setResult] = useState([]);
   const [apiKey, setApiKey] = useState("AIzaSyAKXbxvGaBZjkgngiHBcpmtuNtiwdpnzWI");
 
-
   function handleChange(event) {
     const book = event.target.value;
     setBook(book);
@@ -20,7 +19,6 @@ function Books() {
     console.log(book);
     Axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key=" + apiKey + "&maxResults=10")
       .then(data => {
-        console.log(data.data.items);
         setResult(data.data.items);
       })
   }
