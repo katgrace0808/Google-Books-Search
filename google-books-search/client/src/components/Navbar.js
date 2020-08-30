@@ -10,12 +10,12 @@ function Navbar() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+                    {/* <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
                         Google Books
-                    </Link>
+                    </Link> */}
                     <Link
-                        to="/search"
-                        className={location.pathname === "/search" ? "nav-link active" : "nav-link"}
+                        to="/"
+                        className={location.pathname === "/" ? "nav-link active" : "nav-link"}
                     >
                         Search
                     </Link>

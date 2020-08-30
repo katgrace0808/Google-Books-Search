@@ -1,17 +1,22 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
+import Navbar from "./components/Navbar";
 import Saved from "./pages/Saved";
-import Nav from "./components/Nav";
-
+import Detail from "./pages/Detail";
 
 function App() {
+  const [bookPage, setBookPage] = useState("");
   return (
     <Router>
-    <div>
-      <Nav />
-      <Books />
-    </div>
+      <div>
+        <Navbar currentPage={bookPage} />
+        <Switch>
+        <Route exact path="/" component={Books} />
+        <Route exact path="/saved" component={Saved} />
+        <Route exact path="/books/:id" component={Detail} />
+        </Switch>
+      </div>
     </Router>
   );
 }
